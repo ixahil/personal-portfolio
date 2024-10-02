@@ -3,8 +3,16 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   logo: "SahilDev.pro",
   developer: "Sahil Shaikh",
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Sahil Dev - Personal Portfolio",
+  keywords: [
+    "fullstack developement",
+    "react",
+    "javascript",
+    "typescript",
+    "nodejs",
+  ],
+  description:
+    "I am a full-stack developer with expertise in Node.js. I have experience in building scalable, secure, and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
   navItems: [
     {
       label: "Home",
