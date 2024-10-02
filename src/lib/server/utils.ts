@@ -12,8 +12,14 @@ const databases = new Databases(client);
 
 export const getProjects = async () => {
   const _ = cookies();
-  return databases.listDocuments(
-    "66fce36200234e0b6158",
-    "66fce37100364fd2637c"
-  );
+  try {
+    const response = await databases.listDocuments(
+      "66fce36200234e0b6158",
+      "66fce37100364fd2637c"
+    );
+    return response;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 };

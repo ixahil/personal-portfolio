@@ -13,17 +13,21 @@ export type Project = {
 };
 
 const ProjectSection = async () => {
-  const { documents: rawProjects } = await getProjects();
+  const data = await getProjects();
 
-  const projects: Project[] = rawProjects.map((doc: any) => ({
-    title: doc.title,
-    description: doc.description,
-    technologies: doc.technologies,
-    images: doc.images,
-    source: doc.source,
-    demo: doc.demo,
-    $id: doc["$id"],
-  }));
+  var projects: Project[];
+
+  if (data) {
+    var projects: Project[] = data.documents.map((doc: any) => ({
+      title: doc.title,
+      description: doc.description,
+      technologies: doc.technologies,
+      images: doc.images,
+      source: doc.source,
+      demo: doc.demo,
+      $id: doc["$id"],
+    }));
+  }
 
   return (
     <section
