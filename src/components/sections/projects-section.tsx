@@ -38,12 +38,16 @@ const ProjectSection = async () => {
         <h2 className={title({ size: "sm" })}>My Projects&nbsp;</h2>
       </div>
 
-      <div className="mt-8 space-y-16">
-        {projects
-          ? projects.map((project) => (
-              <ProjectCard key={project.$id} project={project} />
-            ))
-          : null}
+      <div className="mt-8 space-y-16 w-full h-full">
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <ProjectCard key={project.$id} project={project} />
+          ))
+        ) : (
+          <div className="w-full h-full border-2 min-h-96 flex items-center justify-center rounded-lg dark:border-gray-600">
+            <h5 className="text-center underline text-xl">Nothing here!</h5>
+          </div>
+        )}
       </div>
     </section>
   );
