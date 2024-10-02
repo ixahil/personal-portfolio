@@ -15,10 +15,10 @@ export type Project = {
 const ProjectSection = async () => {
   const data = await getProjects();
 
-  var projects: Project[];
+  let projects: Project[] = [];
 
   if (data) {
-    var projects: Project[] = data.documents.map((doc: any) => ({
+    let projects: Project[] = data.documents.map((doc: any) => ({
       title: doc.title,
       description: doc.description,
       technologies: doc.technologies,
