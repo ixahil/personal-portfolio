@@ -15,7 +15,7 @@ export type Project = {
 const ProjectSection = async () => {
   const data = await getProjects();
 
-  let projects: Project[] = [];
+  let projectsData: Project[] = [];
 
   if (data) {
     let projects: Project[] = data.documents.map((doc: any) => ({
@@ -27,6 +27,7 @@ const ProjectSection = async () => {
       demo: doc.demo,
       $id: doc["$id"],
     }));
+    projectsData = projects;
   }
 
   return (
@@ -39,8 +40,8 @@ const ProjectSection = async () => {
       </div>
 
       <div className="mt-8 space-y-16 w-full h-full">
-        {projects.length > 0 ? (
-          projects.map((project) => (
+        {projectsData.length > 0 ? (
+          projectsData.map((project) => (
             <ProjectCard key={project.$id} project={project} />
           ))
         ) : (
