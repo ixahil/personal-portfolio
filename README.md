@@ -18,25 +18,17 @@ Visit my live portfolio: [www.sahildev.pro](http://www.sahildev.pro)
 
 ## Run Locally
 
-Clone the project
+1. Clone/Fork and Install the dependency
 
 ```bash
   git clone https://github.com/ixahil/personal-portfolio
-```
 
-Go to the project directory
-
-```bash
   cd personal-porfolio
-```
 
-Install dependencies
-
-```bash
   npm install
 ```
 
-Add Environments
+2. Add Environments
 
 ```bash
 NEXT_PUBLIC_APPWRITE_ENDPOINT = #ENDPOINT to your Appwrite#
@@ -44,7 +36,7 @@ NEXT_PUBLIC_APPWRITE_PROJECT = #APPWRITE Project ID#
 NEXT_APPWRITE_KEY = #APPWRITE SECRET KEY#
 ```
 
-Start the server
+3. Start the server
 
 ```bash
   npm run start
