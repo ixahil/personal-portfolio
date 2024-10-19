@@ -1,6 +1,7 @@
 import { title } from "@/components/primitives";
 import { getProjects } from "@/lib/server/utils";
 import ProjectCard from "../project-card";
+import SectionLayout from "../layouts/section-layout";
 
 export type Project = {
   title: string;
@@ -31,14 +32,7 @@ const ProjectSection = async () => {
   }
 
   return (
-    <section
-      id="projects"
-      className="flex flex-col items-center justify-center gap-4 py-8 md:py-10"
-    >
-      <div className="inline-block max-w-xl text-center justify-center">
-        <h2 className={title({ size: "sm" })}>My Projects&nbsp;</h2>
-      </div>
-
+    <SectionLayout id="projects" title="Projects">
       <div className="mt-8 space-y-16 w-full h-full">
         {projectsData.length > 0 ? (
           projectsData.map((project) => (
@@ -50,7 +44,7 @@ const ProjectSection = async () => {
           </div>
         )}
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 

@@ -16,8 +16,13 @@
     url("../app/assets/fonts/Agustina.woff") format("woff");
 }
 
-section {
+/* section {
   margin: 4rem 0;
+} */
+
+section {
+  margin: 4rem 0 0 0;
+  scroll-margin-top: 100px;
 }
 
 .main-bg {

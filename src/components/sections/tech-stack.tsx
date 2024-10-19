@@ -35,8 +35,9 @@ const TechStack = () => {
           Technologies used in this portfolio&nbsp;
         </h3>
         <p>
-          You can copy this portfolio and change the settings, voila you have
-          your own portfolio crafted - Don't forget to give me a star on github.
+          You can copy/clone this portfolio and change the settings, voila you
+          have your own portfolio crafted - Don't forget to give me a star on
+          github &lt;3.
         </p>
       </div>
 

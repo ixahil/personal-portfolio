@@ -15,6 +15,7 @@ import { GithubIcon, LinkedInIcon, Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 import SearchInput from "./search";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
   return (
@@ -34,17 +35,19 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <ul className="hidden lg:flex gap-6 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={linkStyles({ color: "foreground" })}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
+          {siteConfig.navItems.map((item) => {
+            return (
+              <NavbarItem key={item.href}>
+                <NextLink
+                  className={linkStyles({ color: "foreground" })}
+                  color="foreground"
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarItem>
+            );
+          })}
         </ul>
       </NavbarContent>
 
@@ -53,7 +56,7 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden lg:flex">
-          <SearchInput />
+          {/* <SearchInput /> */}
         </NavbarItem>
         <NavbarItem className="hidden sm:flex gap-2">
           <Link
