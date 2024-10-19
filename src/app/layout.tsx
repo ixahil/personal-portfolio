@@ -39,13 +39,11 @@ export default function RootLayout({
         className={`min-h-screen bg-background antialiased ${fontMontserrat.className}`}
       >
         <Providers>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <Navbar />
+          <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            {children}
+          </main>
+          <Footer />
         </Providers>
       </body>
     </html>

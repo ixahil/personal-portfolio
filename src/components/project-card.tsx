@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
           aria-label={`View ${project.title} project`}
         >
           <Globe className="mr-2" size={18} />
-          View Project
+          Live Demo
         </Link>
         <Link
           href={project.source}
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
           aria-label={`View ${project.title} on GitHub`}
         >
           <GithubIcon className="mr-2" />
-          GitHub
+          Open Repo
         </Link>
       </div>
     </div>
