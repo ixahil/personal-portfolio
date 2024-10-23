@@ -1,4 +1,4 @@
-import { title } from "@/components/primitives";
+import { subtitle, title } from "@/components/primitives";
 import { Avatar, Card } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,9 +12,8 @@ const EducationSection = async () => {
         {data.education.map((ed) => (
           <div key={ed.id} className="grid gap-1 relative">
             <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-2 dark:bg-gray-50" />
-
             <h4 className="text-xl font-medium">{ed.degree}</h4>
-            <h5 className="font-medium">{ed.institution}</h5>
+            <h5 className="font-normal">{ed.institution}</h5>
             <div className="text-gray-500 dark:text-gray-400">
               {ed.startDate} - {ed.endDate}
             </div>

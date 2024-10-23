@@ -15,8 +15,10 @@ const HeroSection = () => {
       className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 my-0"
     >
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Full-Stack&nbsp;</span>
-        <span className={title({ color: "blue" })}>Developer&nbsp;</span>
+        <h1>
+          <span className={title()}>Full-Stack&nbsp;</span>
+          <span className={title({ color: "blue" })}>Developer&nbsp;</span>
+        </h1>
         <br />
         <div className={subtitle({ class: "mt-4" })}>
           Hi, I'm <span className="underline">Sahil Shaikh</span>. Full Stack

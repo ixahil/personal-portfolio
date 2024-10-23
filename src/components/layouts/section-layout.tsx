@@ -16,7 +16,7 @@ const SectionLayout = ({ children, title, id }: Props) => {
       <div className="">
         <h2 className={titlePrimitive({ size: "md" })}>{title}</h2>
       </div>
-      <div className="mt-8 space-y-6 justify-start self-start ml-6">
+      <div className="mt-8 space-y-6 justify-start self-start ml-0 sm:ml-6">
         {children}
       </div>
     </section>

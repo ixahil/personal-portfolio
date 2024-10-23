@@ -15,8 +15,8 @@ const BlogSection = async () => {
             nonce=""
             rel="noopener noreferrer"
           >
-            <h3 className="text-xl md:text-3xl font-semibold">{post.title}</h3>
-            <p className="md:text-lg font-light">{post.description}</p>
+            <h3 className="text-xl md:text-2xl font-semibold">{post.title}</h3>
+            <p className="md:text-medium font-light">{post.description}</p>
             <div className="flex items-center gap-4">
               <p className="text-sm font-medium text-gray-500 mt-2">
                 Published at: {post.publishDate}
