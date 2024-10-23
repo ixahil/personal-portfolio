@@ -1,27 +1,26 @@
 import { title } from "@/components/primitives";
 import { techIcons } from "@/config/icons";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 
 type TechKey =
-  | "typescript"
-  | "react"
-  | "tailwind"
-  | "sass"
-  | "node"
-  | "next"
-  | "next"
-  | "appwrite"
-  | "cloudinary";
+  | "Typescript"
+  | "React"
+  | "Tailwind"
+  | "Sass"
+  | "Node"
+  | "Next"
+  | "Appwrite"
+  | "Cloudinary";
 
 const techs: TechKey[] = [
-  "next",
-  "react",
-  "node",
-  "tailwind",
-  "appwrite",
-  "node",
-  "typescript",
-  "cloudinary",
+  "Next",
+  "React",
+  "Node",
+  "Tailwind",
+  "Appwrite",
+  "Typescript",
+  "Cloudinary",
 ];
 
 const TechStack = () => {
@@ -37,20 +36,22 @@ const TechStack = () => {
         <p>
           You can copy/clone this portfolio and change the settings, voila you
           have your own portfolio crafted - Don't forget to give me a star on
-          github &lt;3.
+          github.
         </p>
       </div>
 
       <div className="mt-8 flex gap-4">
         {techs.map((val: TechKey, key) => (
-          <Image
-            key={val + key}
-            src={`/icons/${techIcons[val]}`}
-            width={48}
-            height={48}
-            alt={val}
-            className="size-6 md:size-12"
-          />
+          <div className="flex flex-col items-center gap-2" key={val + key}>
+            <Image
+              src={`/icons/${techIcons[val]}`}
+              width={48}
+              height={48}
+              alt={val}
+              className="size-6 md:size-12"
+            />
+            <span className="font-medium">{val}</span>
+          </div>
         ))}
       </div>
     </section>
