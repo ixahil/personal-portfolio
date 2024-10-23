@@ -73,15 +73,12 @@ export const siteConfig = {
       href: "#contact",
     },
   ],
-  email: "dev.sahil@icloud.com",
+  email: "sahilshaiikh@hotmail.com",
   links: {
-    email: "mailto:dev.sahil@icloud.com",
+    email: "mailto:sahilshaiikh@hotmail.com",
     github: "https://github.com/ixahil",
     linkedin: "https://www.linkedin.com/in/imxahil/",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    medium: "https://medium.com/@sahildev.pro",
   },
 };
 

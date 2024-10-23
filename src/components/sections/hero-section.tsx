@@ -58,14 +58,19 @@ const HeroSection = () => {
           <div className="overflow-hidden relative scrolling-wrapper dark:border-gray-600">
             <div className="scrolling-items cursor-pointer">
               {technologies.concat(technologies).map((t, k) => (
-                <Image
+                <div
+                  className="flex flex-col items-center gap-2"
                   key={t.name + k}
-                  src={`/icons/${t.icon}`}
-                  width={48}
-                  height={48}
-                  alt={t.name}
-                  className="size-6 md:size-12"
-                />
+                >
+                  <Image
+                    src={`/icons/${t.icon}`}
+                    width={48}
+                    height={48}
+                    alt={t.name}
+                    className="size-6 md:size-12"
+                  />
+                  <span className="font-medium">{t.name}</span>
+                </div>
               ))}
             </div>
           </div>
