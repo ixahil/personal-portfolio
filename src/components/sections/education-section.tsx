@@ -19,7 +19,7 @@ const EducationSection = async () => {
               {ed.startDate} - {ed.endDate}
             </div>
             <p className="mt-2 text-sm text-gray-500">{ed.description}</p>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {ed.skills.map((skill) => (
                 <span
                   key={skill}

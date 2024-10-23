@@ -40,7 +40,7 @@ const TechStack = () => {
         </p>
       </div>
 
-      <div className="mt-8 flex gap-4">
+      <div className="mt-8 flex gap-4 flex-wrap items-center justify-center">
         {techs.map((val: TechKey, key) => (
           <div className="flex flex-col items-center gap-2" key={val + key}>
             <Image

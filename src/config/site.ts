@@ -75,7 +75,7 @@ export const siteConfig = {
   ],
   email: "sahilshaiikh@hotmail.com",
   links: {
-    email: "mailto:sahilshaiikh@hotmail.com",
+    email: "sahilshaiikh@hotmail.com",
     github: "https://github.com/ixahil",
     linkedin: "https://www.linkedin.com/in/imxahil/",
     medium: "https://medium.com/@sahildev.pro",

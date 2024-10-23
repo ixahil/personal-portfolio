@@ -26,10 +26,14 @@ const ContactSection = async () => {
             className="flex gap-4 text-black dark:text-white"
             isExternal
             aria-label={linkKey}
-            href={siteConfig.links[linkKey]}
+            href={
+              linkKey === "email"
+                ? `mailto:${siteConfig.links[linkKey]}`
+                : siteConfig.links[linkKey]
+            }
           >
             {icons[linkKey] || null}
-            <span className="font-bold text-lg">
+            <span className="font-bold text-xs lg:text-lg">
               {siteConfig.links[linkKey]}
             </span>
           </Link>
