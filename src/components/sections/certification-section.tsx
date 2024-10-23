@@ -14,7 +14,7 @@ const CertificationSection = async () => {
             <div className="text-gray-500 dark:text-gray-400">
               {ed.completedDate}
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
               {ed.skills.map((skill) => (
                 <span
                   key={skill}
