@@ -1,18 +1,18 @@
 import { siteConfig } from "@/config/site";
-import { Link } from "@nextui-org/link";
 import Image from "next/image";
 import NextLink from "next/link";
 import { GithubIcon, LinkedInIcon } from "./icons";
 import { Globe } from "lucide-react";
 import { title, subtitle } from "@/components/primitives";
 import { Project } from "./sections/projects-section";
+import { Link, Button } from "@nextui-org/react";
 
 interface ProjectCardProps {
   project: Project;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
-  <div className="flex flex-col md:flex-row gap-8 border-2 p-8 rounded-lg shadow-lg dark:border-gray-600 transition-all duration-300 hover:shadow-2xl">
+  <div className="flex flex-col md:flex-row gap-8 border-0 sm:border-2 p-0 sm:p-8 rounded-lg shadow-lg dark:border-gray-600 transition-all duration-300 hover:shadow-2xl">
     <div className="dark:border-gray-600 w-full md:w-4/6 h-full md:h-72 shadow-md border-2 rounded-lg relative overflow-hidden group hover:cursor-pointer">
       {project.images ? (
         <Image
@@ -33,8 +33,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
       )}
     </div>
     <div className="flex flex-col justify-between md:w-3/5 p-6">
-      <div className="">
-        <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+      <div className="space-y-2">
+        <h4 className={title({ size: "xs" })}>{project.title}</h4>
         <div className="mb-4">
           {project?.technologies?.map((tech, index) => (
             <span
@@ -46,12 +46,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
           ))}
         </div>
       </div>
-      <p className="text-gray-600 dark:text-gray-300 mb-4">
+      <p className="text-gray-600 dark:text-gray-300 mb-4 block">
         {project.description}
       </p>
       <div className="flex space-x-4">
-        <Link
+        <Button
           href={project.demo}
+          as={Link}
           isExternal
           target="_blank"
           rel="noopener noreferrer"
@@ -60,9 +61,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
         >
           <Globe className="mr-2" size={18} />
           Live Demo
-        </Link>
-        <Link
+        </Button>
+        <Button
           href={project.source}
+          as={Link}
           isExternal
           target="_blank"
           rel="noopener noreferrer"
@@ -71,7 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
         >
           <GithubIcon className="mr-2" />
           Open Repo
-        </Link>
+        </Button>
       </div>
     </div>
   </div>

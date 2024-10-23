@@ -1,4 +1,4 @@
-import { title } from "@/components/primitives";
+import { subtitle, title } from "@/components/primitives";
 import Link from "next/link";
 import { data } from "@/config/site";
 import SectionLayout from "../layouts/section-layout";

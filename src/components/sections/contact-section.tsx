@@ -33,7 +33,7 @@ const ContactSection = async () => {
             }
           >
             {icons[linkKey] || null}
-            <span className="font-bold text-xs lg:text-lg">
+            <span className="font-medium text-medium">
               {siteConfig.links[linkKey]}
             </span>
           </Link>
